@@ -181,12 +181,16 @@ graph TD
     D -.-> D1
     E -.-> E1
 
-    style A fill:#e1f5ff
-    style F fill:#ffe1e1
-    style B fill:#f0f0f0
-    style C fill:#f0f0f0
-    style D fill:#f0f0f0
-    style E fill:#f0f0f0
+    style A fill:#e1f5ff,color:#000
+    style F fill:#ffe1e1,color:#000
+    style B fill:#f0f0f0,color:#000
+    style C fill:#f0f0f0,color:#000
+    style D fill:#f0f0f0,color:#000
+    style E fill:#f0f0f0,color:#000
+    style B1 color:#000
+    style C1 color:#000
+    style D1 color:#000
+    style E1 color:#000
 ```
 
 <p align="center">

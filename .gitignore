@@ -60,6 +60,12 @@ tests/manual_test/*.md
 slop_report*.txt
 *_Verification_Report.md
 verification_report*.md
+slop_self_inspection.md
+ROADMAP.md
+CONFIG_EXAMPLES.md
+docs/CRITICAL_PATCH_COMPLETE.md
+docs/ENTERPRISE_GUIDE.md
+tests/corpus/DETECTION_REPORT.md
 
 # Internal Design & Strategy Documents (not for public repo)
 SIDRCE_SLOP_*.md
@@ -72,6 +78,11 @@ SENTINEL_CERT.md
 *_blueprint*.md
 *_blueprint*.manifest.json
 analysis_result*.json
+test_patterns_result.json
+project_structure.txt
+
+# Experimental prototype UI
+dashboard/
 
 # CI/CD Gate Reports
 gate_report.md
