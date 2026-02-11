@@ -1,11 +1,19 @@
-"""FastAPI REST API server for AI SLOP Detector"""
+"""FastAPI REST API server for AI SLOP Detector.
+
+Requires the [api] extras: pip install ai-slop-detector[api]
+"""
 
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+try:
+    from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException
+    from fastapi.middleware.cors import CORSMiddleware
+except ImportError:
+    raise ImportError(
+        "FastAPI is required for the API server. " "Install with: pip install ai-slop-detector[api]"
+    )
 
 from ..core import SlopDetector
 from ..history import HistoryTracker

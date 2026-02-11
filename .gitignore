@@ -83,6 +83,12 @@ GITHUB_METADATA.md
 test_slop_example.py
 test_*.pyc
 
+# Root-level test files (proper tests live in tests/)
+test_context_jargon.py
+test_docstring_inflation.py
+test_hallucinated_deps.py
+test_placeholder_patterns.py
+
 # Temporary output files
 report.json
 report.md

@@ -1,6 +1,6 @@
 """
-AI SLOP Detector - Authentication Module
-Enterprise SSO, RBAC, and Audit Logging
+EXPERIMENTAL: Enterprise auth module (SSO, RBAC, Audit Logging).
+Not yet integrated with core. Prototype status.
 """
 
 from .audit import AuditEvent, AuditEventType, AuditLogger, AuditSeverity

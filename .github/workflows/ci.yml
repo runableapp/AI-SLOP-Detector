@@ -84,10 +84,10 @@ jobs:
           
       - name: Check SLOP score
         run: |
-          SCORE=$(slop-detector --project src/ --json | jq '.avg_slop_score')
-          echo "SLOP Score: $SCORE"
+          SCORE=$(slop-detector --project src/ --json | jq '.weighted_deficit_score')
+          echo "Weighted Deficit Score: $SCORE"
           if (( $(echo "$SCORE > 30" | bc -l) )); then
-            echo "SLOP score too high: $SCORE"
+            echo "Deficit score too high: $SCORE"
             exit 1
           fi
           

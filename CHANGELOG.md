@@ -283,99 +283,20 @@ Special thanks to community feedback that drives these improvements. This releas
 
 ---
 
-## [3.0.0] - Planned (2026-Q3)
+## [3.0.0] - PLANNED (Not Yet Implemented)
 
-### Added - Enterprise Edition
+> **Note:** The following is a roadmap of planned features for v3.0.0.
+> None of these features are implemented or benchmarked yet.
+> Prototype code exists in `src/slop_detector/auth/` and `src/slop_detector/ml/`
+> but is marked EXPERIMENTAL and not integrated with the core.
 
-#### Multi-Language Support
-- **JavaScript/TypeScript**: Full AST analysis with ESLint integration
-- **Java**: Support for Spring Boot, Maven, Gradle projects
-- **Go**: Go module support, goroutine pattern detection
-- **Rust**: Cargo integration, ownership pattern analysis
-- **C++**: CMake support, modern C++ standards (C++17/20)
-- **C#**: .NET Core/.NET 6+ support, LINQ pattern detection
-- **Universal Patterns**: Cross-language anti-pattern detection
-
-#### Enterprise Authentication (SSO)
-- **SAML 2.0**: Full IdP integration (Okta, OneLogin, Azure AD)
-- **OAuth2/OIDC**: Google, GitHub, Auth0, Custom providers
-- **Session Management**: JWT-based secure sessions (8-hour expiry)
-- **Token Validation**: Automatic token refresh and revocation
-- **Multi-factor Ready**: MFA challenge integration hooks
-
-#### Role-Based Access Control (RBAC)
-- **5 Default Roles**: admin, team_lead, developer, analyzer, viewer
-- **Hierarchical Permissions**: 18 fine-grained permissions
-- **Custom Roles**: Create organization-specific roles
-- **Permission Inheritance**: Roles inherit from parent roles
-- **Decorator Support**: `@require_permission` for API endpoints
-- **Bulk Operations**: Assign/revoke roles for multiple users
-
-#### Audit Logging
-- **Tamper-Proof**: SQLite/PostgreSQL backend with immutable logs
-- **15+ Event Types**: Login, permission checks, analysis, config changes
-- **Severity Levels**: DEBUG, INFO, WARNING, ERROR, CRITICAL
-- **Query Interface**: Filter by user, date, event type, severity
-- **Retention Policy**: Configurable log retention (default 90 days)
-- **Export Formats**: JSON, CSV for compliance reporting
-- **Statistics**: Real-time audit statistics and trending
-
-#### Cloud-Native Deployment
-- **Kubernetes**: Complete Helm charts with health checks
-- **Docker Compose**: Production-ready multi-container setup
-- **Auto-scaling**: HPA (Horizontal Pod Autoscaler) configuration
-- **Load Balancing**: Multi-replica support with session affinity
-- **Health Endpoints**: `/health`, `/ready`, `/metrics` (Prometheus)
-- **Environment Config**: 12-factor app compliance
-
-#### Security Enhancements
-- **Secrets Management**: Kubernetes secrets, AWS Secrets Manager, Vault
-- **Network Policies**: Pod-to-pod communication restrictions
-- **Encryption**: Audit log encryption at rest
-- **HTTPS Only**: TLS 1.3 enforcement
-- **Rate Limiting**: API endpoint protection
-- **CORS**: Configurable cross-origin policies
-
-#### Compliance Features
-- **GDPR**: Right to access, erasure, data portability
-- **SOC 2**: Audit trails, access controls, encryption
-- **HIPAA**: PHI protection for medical code analysis
-- **Audit Reports**: Automated compliance report generation
-
-### Changed
-- **Architecture**: Microservices-ready with service separation
-- **Database**: PostgreSQL support for enterprise scale
-- **API**: Extended with enterprise endpoints
-- **Performance**: 3x faster with parallel language analyzers
-- **Scalability**: Tested up to 10M LOC projects
-
-### Performance Benchmarks
-- SSO Login: <500ms
-- Permission Check: <1ms
-- Audit Log Write: <5ms
-- Multi-language Analysis (100K LOC): <45s
-- API Response Time (p95): <100ms
-
-### Documentation
-- **Enterprise Guide**: Complete SSO/RBAC/Audit setup
-- **Deployment Guide**: K8s, Docker, AWS, Azure, GCP
-- **API Reference**: OpenAPI 3.0 specification
-- **Security Best Practices**: Hardening checklist
-
-### Migration Guide
-```bash
-# Upgrade from v2.x
-pip install --upgrade ai-slop-detector
-
-# Initialize enterprise features
-slop-detector enterprise init \
-  --sso-provider oidc \
-  --enable-rbac \
-  --enable-audit
-
-# Import existing users
-slop-detector enterprise migrate-users users.csv
-```
+### Planned Features
+- Multi-language support (JavaScript, TypeScript, Java, Go, Rust, C++, C#)
+- Enterprise authentication (SSO via SAML 2.0, OAuth2/OIDC)
+- Role-based access control (RBAC) with hierarchical permissions
+- Tamper-proof audit logging (SQLite/PostgreSQL backend)
+- Cloud-native deployment (Kubernetes Helm charts, Docker Compose)
+- Compliance features (GDPR, SOC 2, HIPAA)
 
 ---
 
@@ -652,10 +573,14 @@ slop-detector enterprise migrate-users users.csv
 
 | Version | Date | Focus | Status |
 |---------|------|-------|--------|
-| **2.0.0** | 2026-01-08 | Initial production release | [+] Current |
-| **2.1.0** | TBD | Pattern registry + cross-language | [ ] Planned |
-| **2.2.0** | TBD | ML detection + JS/TS support | [ ] Planned |
-| **2.3.0** | TBD | Historical tracking + IDE plugins | [ ] Planned |
+| **2.6.4** | 2026-02-08 | Scanner reliability, ignore patterns | [+] Current |
+| **2.6.3** | 2026-01-16 | Consent-based complexity | [+] Released |
+| **2.6.2** | 2026-01-15 | Integration test evidence | [+] Released |
+| **2.6.1** | 2026-01-12 | Config sovereignty, question tests | [+] Released |
+| **2.6.0** | 2026-01-12 | 6 killer upgrades (Phase 2) | [+] Released |
+| **2.5.x** | 2026-01-09 | Polyglot + terminology | [+] Released |
+| **2.0.0** | 2026-01-08 | Initial production release | [+] Released |
+| **3.0.0** | TBD | Enterprise edition | [ ] Planned |
 
 ---
 
@@ -699,6 +624,6 @@ slop-detector enterprise migrate-users users.csv
 
 ---
 
-**Last Updated**: 2026-01-09
-**Current Version**: 2.5.0
+**Last Updated**: 2026-02-11
+**Current Version**: 2.6.4
 **Status**: Production Ready

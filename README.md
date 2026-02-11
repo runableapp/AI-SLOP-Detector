@@ -7,7 +7,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/ai-slop-detector.svg)](https://pypi.org/project/ai-slop-detector/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://img.shields.io/badge/tests-170%20passed-brightgreen.svg)](tests/)
+[![Tests](https://img.shields.io/badge/tests-183%20passed-brightgreen.svg)](tests/)
 [![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen.svg)](htmlcov/)
 
 **Production-grade static analyzer for detecting AI-generated code quality issues with evidence-based validation.**
@@ -72,7 +72,7 @@ slop-detector mycode.py --json --output report.json
 - ✅ **Enhanced Reporting**: Reports now explicitly break down `tests_unit` vs `tests_integration`.
 
 ### Quality Improvements
-- **Tests**: 170 comprehensive tests (up from 165)
+- **Tests**: 183 comprehensive tests (up from 165)
 - **Coverage**: 95% Context-Jargon coverage
 - **Zero-False-Positive Tuning**: Helper files excluded from test counts
 
@@ -161,7 +161,7 @@ def process():
 
 ## Architecture Overview
 
-AI-SLOP Detector v2.6.2 uses a **multi-dimensional analysis engine**:
+AI-SLOP Detector v2.6.4 uses a **multi-dimensional analysis engine**:
 
 ```mermaid
 graph TD
@@ -441,8 +441,8 @@ If you use AI-SLOP Detector in research, please cite:
   title = {AI-SLOP Detector: Evidence-Based Static Analysis for AI-Generated Code},
   author = {Flamehaven},
   year = {2024},
-  version = {2.6.2},
-  url = {https://github.com/yourusername/ai-slop-detector}
+  version = {2.6.4},
+  url = {https://github.com/flamehaven01/AI-SLOP-Detector}
 }
 ```
 
@@ -466,25 +466,25 @@ If you use AI-SLOP Detector in research, please cite:
 - [ ] Custom pattern DSL for user-defined rules
 - [ ] Performance optimizations for large codebases
 
-**v2.8 (Planned Q1 2025):**
+**v2.8 (Planned Q2 2026):**
 - [ ] Multi-language support (JavaScript, TypeScript)
 - [ ] Enhanced CI/CD integrations (GitLab CI, CircleCI)
 - [ ] Real-time analysis daemon mode
 - [ ] Team analytics dashboard (beta)
 
-**v3.0 (Planned Q2 2025):**
+**v3.0 (Planned Q3 2026):**
 - [ ] ML-based pattern recognition
 - [ ] Auto-fix suggestions with confidence scores
 - [ ] IDE plugins (PyCharm, IntelliJ, JetBrains)
-- [ ] Enterprise features (SSO, RBAC already implemented)
+- [ ] Enterprise features (SSO, RBAC - currently experimental)
 
 ---
 
 ## Support
 
 - **Documentation:** [docs/](docs/)
-- **Issues:** [GitHub Issues](https://github.com/yourusername/ai-slop-detector/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/yourusername/ai-slop-detector/discussions)
+- **Issues:** [GitHub Issues](https://github.com/flamehaven01/AI-SLOP-Detector/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/flamehaven01/AI-SLOP-Detector/discussions)
 
 ---
 

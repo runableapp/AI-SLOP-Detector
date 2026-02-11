@@ -388,7 +388,7 @@ def generate_markdown_report(result) -> str:
             ):
                 lines.append("")
                 lines.append(
-                    "⚠️ **Warning**: No integration tests detected, but codebase contains production-ready/enterprise-grade/scalable claims."
+                    "[!] **Warning**: No integration tests detected, but codebase contains production-ready/enterprise-grade/scalable claims."
                 )
 
             lines.append("")
@@ -419,13 +419,13 @@ def generate_markdown_report(result) -> str:
         ):
             continue
 
-        lines.append(f"### 📄 `{Path(str(file_path)).name}`")
+        lines.append(f"### [L] `{Path(str(file_path)).name}`")
         lines.append(f"- **Deficit Score**: {f_res.deficit_score:.2f}")
         lines.append(f"- **Lines of Code**: {f_res.ldr.total_lines}")
 
         # Empty file handling - add table to avoid confusion
         if f_res.ldr.total_lines == 0:
-            lines.append("#### ⚠️ Anti-Patterns & Risk")
+            lines.append("#### [!] Anti-Patterns & Risk")
             lines.append("| Line | Issue | Mitigation Strategy |")
             lines.append("| :--- | :--- | :--- |")
             lines.append(
@@ -438,7 +438,7 @@ def generate_markdown_report(result) -> str:
         # Inflation / Jargon
         jargon_issues = [d for d in f_res.inflation.jargon_details if not d.get("justified")]
         if jargon_issues:
-            lines.append("#### 🔴 Inflation (Jargon) Detected")
+            lines.append("#### [-] Inflation (Jargon) Detected")
             lines.append("| Line | Term | Category | Actionable Mitigation |")
             lines.append("| :--- | :--- | :--- | :--- |")
             for det in jargon_issues:
@@ -450,7 +450,7 @@ def generate_markdown_report(result) -> str:
 
         # Patterns (Static Analysis)
         if hasattr(f_res, "pattern_issues") and f_res.pattern_issues:
-            lines.append("#### ⚠️ Anti-Patterns & Risk")
+            lines.append("#### [!] Anti-Patterns & Risk")
             lines.append("| Line | Issue | Mitigation Strategy |")
             lines.append("| :--- | :--- | :--- |")
             for p in f_res.pattern_issues:

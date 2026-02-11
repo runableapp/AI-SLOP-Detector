@@ -1,6 +1,7 @@
 """
-Multi-Language Support Framework
-Extensible architecture for analyzing 7+ programming languages
+EXPERIMENTAL: Multi-Language Support Framework.
+Only PythonAnalyzer is implemented. Other language analyzers are planned.
+Prototype status.
 """
 
 from .base import AnalysisResult, LanguageAnalyzer
